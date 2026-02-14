@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FitTrack - Registro</title>
+  <link rel="stylesheet" href="style_v2.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>FitTrack</h1>
+
+  <div class="progress-bar">
+    <div class="progress" id="progress"></div>
+  </div>
+
+  <!-- PASO 1 -->
+  <form id="step1" class="form-step active">
+    <h2>Información Personal</h2>
+
+    <div class="field">
+      <input type="text" id="name" placeholder="Nombre completo">
+      <small></small>
+    </div>
+
+    <div class="field">
+      <input type="number" id="age" placeholder="Edad">
+      <small></small>
+    </div>
+
+    <button type="button" onclick="nextStep(1)">Siguiente</button>
+  </form>
+
+  <!-- PASO 2 -->
+  <form id="step2" class="form-step">
+    <h2>Información Física</h2>
+
+    <div class="field">
+      <input type="number" id="weight" placeholder="Peso (kg)">
+      <small></small>
+    </div>
+
+    <div class="field">
+      <input type="number" id="height" placeholder="Altura (cm)">
+      <small></small>
+    </div>
+
+    <button type="button" onclick="prevStep(2)">Atrás</button>
+    <button type="button" onclick="nextStep(2)">Siguiente</button>
+  </form>
+
+  <!-- PASO 3 -->
+  <form id="step3" class="form-step">
+    <h2>Correo y Contraseña</h2>
+
+    <div class="field">
+      <input type="email" id="email" placeholder="Correo electrónico">
+      <small></small>
+    </div>
+
+    <div class="field">
+      <input type="password" id="password" placeholder="Contraseña">
+      <small></small>
+    </div>
+
+    <button type="button" onclick="prevStep(3)">Atrás</button>
+    <button type="submit">Finalizar Registro</button>
+  </form>
+</div>
+
+<script src="script_v2.js"></script>
+</body>
+</html>
